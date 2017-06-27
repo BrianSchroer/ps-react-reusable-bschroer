@@ -95,7 +95,9 @@ module.exports = {
       // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
-      new ModuleScopePlugin(paths.appSrc),
+      
+      // commented out so we can import from /docs, not just /src:
+      // new ModuleScopePlugin(paths.appSrc),
     ],
   },
   module: {
