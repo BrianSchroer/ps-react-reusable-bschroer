@@ -15,7 +15,7 @@ const ComponentPage = ({component}) => {
             <h3>Example{exampleCount !== 1 && "s"}</h3>
             {
                 (exampleCount)
-                    ? examples.map(example => <Example key={example.code} example={example} componenName={name} />)
+                    ? examples.map(example => <Example key={example.code} example={example} componentName={name} />)
                     : "No examples exist."
             }
 

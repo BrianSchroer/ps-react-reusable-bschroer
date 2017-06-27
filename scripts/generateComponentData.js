@@ -69,7 +69,7 @@ function getExampleData(examplesPath, componentName) {
     var exampleFiles = getExampleFiles(examplesPath, componentName);
 
     return exampleFiles.map(function(file) {
-        var filePath = path.join(examplesPath, componentName);
+        var filePath = path.join(examplesPath, componentName, file);
         var content = readFile(filePath);
         var info = parse(content);
 
@@ -100,12 +100,8 @@ function getDirectories(filePath) {
 }
 
 function getFiles(filePath) {
-    console.log(chalk.magenta('Getting files from ' + filePath + '...'));
-
     return fs.readdirSync(filePath).filter(function(file) {
-        var fullPath = path.join(filePath, file);
-        console.log(chalk.magenta('Checking ' + fullPath + '...'));
-        return fs.statSync(fullPath).isFile();      
+        return fs.statSync(path.join(filePath, file)).isFile();      
     });
 }
 
