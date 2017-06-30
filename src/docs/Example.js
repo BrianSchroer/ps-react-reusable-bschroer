@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CodeExample from './CodeExample';
 
 class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {showCode: false};
+    state = {
+        showCode: false
     }
-
+    
     toggleCode = event => {
         event.preventDefault();
         this.setState(prevState => {
@@ -31,7 +31,7 @@ class Example extends React.Component {
                     </button>
                 </p>
 
-                {showCode && code}
+                {showCode && <CodeExample>{code}</CodeExample>}
             </div>
         );
     }

@@ -4,12 +4,9 @@ import ComponentPage from './ComponentPage';
 import componentData from '../../config/componentData';
 
 export default class Docs extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            route: window.location.hash.substr(1)
-        };
-    }
+    state = {
+        route: window.location.hash.substr(1)
+    };
 
     componentDidMount() {
         window.addEventListener('hashchange', () => {

@@ -24,6 +24,10 @@ table {
   border-collapse:collapse;
 }
 
+pre {
+  font-size: large;
+}
+
 /* Documentation site component styles */
 .example {
   border: solid 1px #d3d3d3;
