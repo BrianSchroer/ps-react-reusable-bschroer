@@ -2,6 +2,6 @@ import React from 'react';
 import ProgressBar from 'ps-react/ProgressBar';
 
 /** 10% progress, height 150px */
-export default function Example10Percent() {
+export default function ExampleProgressBar10Percent() {
     return <ProgressBar percent={10} width={150} />
 }
