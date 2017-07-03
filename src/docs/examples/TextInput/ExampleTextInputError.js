@@ -2,7 +2,7 @@ import React from 'react';
 import TextInput from 'ps-react/TextInput';
 
 /** Required TextInput with error */
-export default function ExampleTextInputErrror() {
+export default function ExampleTextInputError() {
     return (
         <TextInput 
             htmlId="example-required"

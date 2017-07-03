@@ -1,10 +1,10 @@
 import React from 'react';
-import TextInputBEM from 'ps-react/TextInputBEM';
+import TextInputCSSModules from 'ps-react/TextInputCSSModules';
 
 /** Required TextInput with error */
-export default function ExampleTextInputBEMError() {
+export default function ExampleTextInputCSSModulesError() {
     return (
-        <TextInputBEM 
+        <TextInputCSSModules 
             htmlId="example-required"
             label="First Name"
             name="firstname"
