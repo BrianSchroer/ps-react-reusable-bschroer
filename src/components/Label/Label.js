@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /** Label with required field display, htmlFor, block styling */
-function Label({htmlFor, label, required}) {
+function Label({htmlFor, label, required = false}) {
     return (
         <label style={{display: 'block'}} htmlFor={htmlFor}>
             {label} {required && <span style={{color: 'red'}}> * </span>}
@@ -19,10 +19,6 @@ Label.propTypes = {
 
     /** Is associated input required? */
     required: PropTypes.bool
-}
-
-Label.defaultProps = {
-    required: false
 }
 
 export default Label;

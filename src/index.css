@@ -50,6 +50,7 @@ pre {
 
 .props th, td {
   text-align: left;
+  vertical-align: top;
   padding: 5px;
 }
 

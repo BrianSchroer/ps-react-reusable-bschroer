@@ -21,7 +21,7 @@ const Props = ({props}) => {
                         <tr key={key}>
                             <td>{key}</td>
                             <td>{prop.description}</td>
-                            <td>{prop.type.name}</td>
+                            <td>{prop.type && prop.type.name}</td>
                             <td>{prop.defaultValue && prop.defaultValue.value}</td>
                             <td>{prop.required && 'X'}</td>
                         </tr>
