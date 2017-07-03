@@ -17,6 +17,7 @@ if (enableWatchMode) {
     console.log(chalk.magenta('Watching for changes to:\n' + pathsToWatch.join('\n')));
     // Regenerate component metadata when components or examples change:
     chokidar.watch(pathsToWatch).on('change', function(path) {
+        console.log(chalk.magenta(`File updated: ${path}`));
         generate(paths);
     })
 } else {
