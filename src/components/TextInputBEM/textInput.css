@@ -1,0 +1,11 @@
+.textInput {
+    margin-bottom: 16px;
+}
+
+.textInput__error {
+    color: red;
+}
+
+.text_input__input--state-error {
+    border: solid 1px red;
+}

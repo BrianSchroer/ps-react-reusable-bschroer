@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Label from '../Label';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-function TextInput({
+function TextInputBEM({
     htmlId, 
     name, 
     label, 
@@ -17,7 +17,7 @@ function TextInput({
     ...props
 }) {
   return (
-    <div style={{marginBottom: 16}}>
+    <div className="textInput">
       <Label htmlFor={htmlId} label={label} required={required} />
       <input
         id={htmlId}
@@ -26,15 +26,15 @@ function TextInput({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        style={error && {border: 'solid 1px red'}}
+        className={error && "textInput__input--state-error"}
         {...props}/>
         {children}
-      {error && <div style={{color: 'red'}}>{error}</div>}
+      {error && <div className="textInput__error">{error}</div>}
     </div>
   );
 };
 
-TextInput.propTypes = {
+TextInputBEM.propTypes = {
   /** Unique HTML ID. Used for tying label to HTML input. Handy hook for automated testing. */
   htmlId: PropTypes.string.isRequired,
 
@@ -66,4 +66,4 @@ TextInput.propTypes = {
   children: PropTypes.node
 };
 
-export default TextInput;
+export default TextInputBEM;
