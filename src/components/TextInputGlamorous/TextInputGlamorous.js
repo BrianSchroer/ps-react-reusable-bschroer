@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Label from '../Label';
-import styled from 'styled-components';
+import glamorous from 'glamorous';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-function TextInputStyledComponents({
+function TextInputGlamorous({
     htmlId, 
     name, 
     label, 
@@ -14,41 +14,40 @@ function TextInputStyledComponents({
     placeholder, 
     value, 
     error, 
-    children, 
+    children,
     ...props
 }) {
 
-  const Error = styled.div`
-    color: red;
-  `;
+  const StyledDiv = glamorous.div({
+    marginBottom: '16px'
+  });
 
-  const Input = styled.input`
-    border: ${error && 'solid 1px red'};
-  `;
+  const StyledInput = glamorous.input({
+    border: (error) ? 'solid 1px red' : 'solid 1px green'  
+  });
 
-  const Fieldset = styled.div`
-    margin-bottom: 16px;
-  `;
+  const StyledError = glamorous.div({
+    color: 'red'  
+  })
 
   return (
-    <Fieldset>
+    <StyledDiv>
       <Label htmlFor={htmlId} label={label} required={required} />
-      <Input
+      <StyledInput
         id={htmlId}
         type={type}
         name={name}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        {...props}
-      />
+        {...props}/>
         {children}
-      {error && <Error>{error}</Error>}
-    </Fieldset>
+      {error && <StyledError>{error}</StyledError>}
+    </StyledDiv>
   );
 };
 
-TextInputStyledComponents.propTypes = {
+TextInputGlamorous.propTypes = {
   /** Unique HTML ID. Used for tying label to HTML input. Handy hook for automated testing. */
   htmlId: PropTypes.string.isRequired,
 
@@ -80,4 +79,4 @@ TextInputStyledComponents.propTypes = {
   children: PropTypes.node
 };
 
-export default TextInputStyledComponents;
+export default TextInputGlamorous;

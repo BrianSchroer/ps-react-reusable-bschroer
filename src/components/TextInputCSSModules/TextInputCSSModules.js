@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import Label from '../Label';
 import styles from './textInput.css';
 
-/** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
+/** Text input with integrated label to enforce consistency in layout,
+ * error display, label placement, and required field marker.
+ * (CSS Modules requires webpack configuration and is "all or nothing" -
+ * If you use it for part of a site, you have to use it for the whole site.) */
 function TextInputCssModules({
     htmlId, 
     name, 
