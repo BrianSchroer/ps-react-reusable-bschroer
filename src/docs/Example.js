@@ -20,10 +20,12 @@ class Example extends React.Component {
         const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default;
 
         return (
-            <div className="example">
+            <div className="example-container">
                 {description && <h4>{description}</h4>}
 
-                <ExampleComponent />
+                <div className="example">
+                    <ExampleComponent />
+                </div>
 
                 <p>
                     <button onClick={this.toggleCode}>

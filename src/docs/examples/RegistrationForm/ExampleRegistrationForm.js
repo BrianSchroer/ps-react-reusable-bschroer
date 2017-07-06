@@ -8,11 +8,6 @@ export default class ExampleRegistrationForm extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <RegistrationForm onSubmit={this.onSubmit} />
-                <hr />
-            </div>
-        );
+        return <RegistrationForm onSubmit={this.onSubmit} />;
     }
 }

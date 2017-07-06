@@ -23,7 +23,7 @@ function TextInputGlamorous({
   });
 
   const StyledInput = glamorous.input({
-    border: (error) ? 'solid 1px red' : 'solid 1px green'  
+    border: error && 'solid 1px red' 
   });
 
   const StyledError = glamorous.div({
