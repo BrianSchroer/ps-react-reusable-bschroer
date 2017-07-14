@@ -1,5 +1,5 @@
 import React from 'react';
-import RegistrationForm from 'ps-react/RegistrationForm';
+import RegistrationForm from '../../../components/RegistrationForm';
 
 /** Example registration form */
 export default class ExampleRegistrationForm extends React.Component {

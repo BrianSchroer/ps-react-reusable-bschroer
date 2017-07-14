@@ -71,7 +71,7 @@ function getExampleData(examplesPath, componentName) {
 
     return exampleFiles.map(function(file) {
         var filePath = path.join(examplesPath, componentName, file);
-        var content = readFile(filePath);
+        var content = adjustComponentRelativePath(readFile(filePath));
         var info = parse(content);
 
         return {
@@ -80,6 +80,11 @@ function getExampleData(examplesPath, componentName) {
             code: content
         };
     });
+}
+
+function adjustComponentRelativePath(exampleFileContents) {
+    const output = exampleFileContents.replace(" from '../../../components/", " from 'ps-react/");
+    return output;
 }
 
 function getExampleFiles(examplesPath, componentName) {

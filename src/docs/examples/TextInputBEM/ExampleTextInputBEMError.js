@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInputBEM from 'ps-react/TextInputBEM';
+import TextInputBEM from '../../../components/TextInputBEM';
 
 /** Required TextInput with error */
 export default function ExampleTextInputBEMError() {

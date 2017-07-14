@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from 'ps-react/ProgressBar';
+import ProgressBar from '../../../components/ProgressBar';
 
 /** default properties */
 export default function ExampleProgressBarDefaultProps() {

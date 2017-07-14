@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInputGlamorous from 'ps-react/TextInputGlamorous';
+import TextInputGlamorous from '../../../components/TextInputGlamorous';
 
 /** Required TextInput with error */
 export default function ExampleTextInputGlamorousError() {

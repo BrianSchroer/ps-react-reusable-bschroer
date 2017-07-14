@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInput from 'ps-react/TextInput';
+import TextInput from '../../../components/TextInput';
 
 /** Password TextInput with max length of 12 */
 export default function ExampleTextInputPassword() {

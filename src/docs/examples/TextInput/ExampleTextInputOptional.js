@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInput from 'ps-react/TextInput';
+import TextInput from '../../../components/TextInput';
 
 /** Optional TextInput */
 export default function ExampleTextInputOptional() {

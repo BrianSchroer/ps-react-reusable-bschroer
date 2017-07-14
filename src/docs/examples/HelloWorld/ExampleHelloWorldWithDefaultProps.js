@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from 'ps-react/HelloWorld';
+import HelloWorld from '../../../components/HelloWorld';
 
 /** Example using default props */
 export default function ExampleHelloWorldWithDefaultProps() {
