@@ -33,6 +33,7 @@
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
     "fs-extra": "3.0.1",
+    "gh-pages": "^0.12.0",
     "highlight.js": "^9.12.0",
     "html-webpack-plugin": "2.28.0",
     "jest": "20.0.3",
@@ -55,15 +56,18 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
+  "homepage": "http://brianschroer.github.io/ps-react-reusable-bschroer/",
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
     "start:docs": "node scripts/start.js",
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
-    "build": "node scripts/build.js",
+    "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "test-verbose": "npm test -- --verbose"
+    "test-verbose": "npm test -- --verbose",
+    "predeploy:docs": "npm run build:docs",
+    "deploy:docs": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
